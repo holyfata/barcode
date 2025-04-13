@@ -1,6 +1,7 @@
 {
-  "name": "package-vanilla",
-  "version": "0.0.1",
+  "name": "@holyfata/barcode-vanilla",
+  "version": "0.0.0",
+  "private": false,
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -38,7 +39,8 @@
   "devDependencies": {
     "@stencil/core": "^4.27.1",
     "@stencil/react-output-target": "1.0.2",
-    "@stencil/vue-output-target": "0.10.7"
+    "@stencil/vue-output-target": "0.10.7",
+    "@types/jsbarcode": "3.11.4"
   },
   "repository": {
     "type": "git",
@@ -54,5 +56,8 @@
   ],
   "author": "HolyFata",
   "license": "MIT",
-  "description": "A Vanilla 3 component."
+  "description": "A Vanilla 3 component.",
+  "dependencies": {
+    "jsbarcode": "3.11.6"
+  }
 }

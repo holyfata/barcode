@@ -4,31 +4,34 @@
     "build": {
       "outputs": ["dist/**"],
       "dependsOn": [
-        "package-vanilla#build",
-        "package-react#build",
-        "package-vue#build"
+        "@holyfata/barcode-vanilla#build",
+        "@holyfata/barcode-react#build",
+        "@holyfata/barcode-vue#build"
       ]
     },
     "build:pkg": {
       "dependsOn": [
-        "package-vanilla#build",
-        "package-react#build",
-        "package-vue#build"
+        "@holyfata/barcode-vanilla#build",
+        "@holyfata/barcode-react#build",
+        "@holyfata/barcode-vue#build"
       ]
     },
-    "package-vanilla#build": {
+    "@holyfata/barcode-vanilla#build": {
       "outputs": ["dist/**"]
     },
-    "package-react#build": {
+    "@holyfata/barcode-react#build": {
       "outputs": ["dist/**"],
-      "dependsOn": ["package-vanilla#build"]
+      "dependsOn": ["@holyfata/barcode-vanilla#build"]
     },
-    "package-vue#build": {
+    "@holyfata/barcode-vue#build": {
       "outputs": ["dist/**"],
-      "dependsOn": ["package-vanilla#build"]
+      "dependsOn": ["@holyfata/barcode-vanilla#build"]
     },
     "dev": {
-      "dependsOn": ["package-react#build", "package-vue#build"]
+      "dependsOn": [
+        "@holyfata/barcode-react#build",
+        "@holyfata/barcode-vue#build"
+      ]
     },
     "bump": {
       "dependsOn": ["build:pkg"]

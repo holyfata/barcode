@@ -13,7 +13,7 @@ export const config: Config = {
       outDir: "../package-react/src/stencil-output",
     }),
     vueOutputTarget({
-      componentCorePackage: "package-vanilla",
+      componentCorePackage: "@holyfata/barcode-vanilla",
       includeDefineCustomElements: true,
       proxiesFile: "../package-vue/src/stencil-output/components.ts",
     }),

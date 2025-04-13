@@ -32,6 +32,9 @@ importers:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
+      "@holyfata/barcode-react":
+        specifier: workspace:*
+        version: link:../../packages/package-react
       "@rspack/cli":
         specifier: ^1.3.4
         version: 1.3.4(@rspack/core@1.3.4(@swc/helpers@0.5.17))(@types/express@4.17.21)(webpack@5.99.5)
@@ -47,9 +50,6 @@ importers:
       "@types/react-dom":
         specifier: ^19.1.1
         version: 19.1.2(@types/react@19.1.1)
-      package-react:
-        specifier: workspace:*
-        version: link:../../packages/package-react
       react-refresh:
         specifier: ^0.17.0
         version: 0.17.0
@@ -63,15 +63,15 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.3)
     devDependencies:
+      "@holyfata/barcode-vue":
+        specifier: workspace:*
+        version: link:../../packages/package-vue
       "@rspack/cli":
         specifier: ^1.3.4
         version: 1.3.4(@rspack/core@1.3.4(@swc/helpers@0.5.17))(@types/express@4.17.21)(webpack@5.99.5)
       "@rspack/core":
         specifier: ^1.3.4
         version: 1.3.4(@swc/helpers@0.5.17)
-      package-vue:
-        specifier: workspace:*
-        version: link:../../packages/package-vue
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.14.1)(typescript@5.8.3)
@@ -85,6 +85,9 @@ importers:
         specifier: ">=16.9.0"
         version: 19.1.0(react@19.1.0)
     devDependencies:
+      "@holyfata/barcode-vanilla":
+        specifier: workspace:*
+        version: link:../package-vanilla
       "@rsbuild/plugin-react":
         specifier: 1.2.0
         version: 1.2.0(@rsbuild/core@1.3.5)
@@ -97,14 +100,15 @@ importers:
       "@types/react":
         specifier: 19.1.1
         version: 19.1.1
-      package-vanilla:
-        specifier: workspace:*
-        version: link:../package-vanilla
       react:
         specifier: 19.1.0
         version: 19.1.0
 
   packages/package-vanilla:
+    dependencies:
+      jsbarcode:
+        specifier: 3.11.6
+        version: 3.11.6
     devDependencies:
       "@stencil/core":
         specifier: ^4.27.1
@@ -115,9 +119,15 @@ importers:
       "@stencil/vue-output-target":
         specifier: 0.10.7
         version: 0.10.7(@stencil/core@4.29.2)(vue@3.5.13(typescript@5.8.3))
+      "@types/jsbarcode":
+        specifier: 3.11.4
+        version: 3.11.4
 
   packages/package-vue:
     devDependencies:
+      "@holyfata/barcode-vanilla":
+        specifier: workspace:*
+        version: link:../package-vanilla
       "@rsbuild/plugin-vue":
         specifier: 1.0.7
         version: 1.0.7(@rsbuild/core@1.3.5)(vue@3.5.13(typescript@5.8.3))
@@ -127,9 +137,6 @@ importers:
       "@stencil/vue-output-target":
         specifier: 0.10.7
         version: 0.10.7(@stencil/core@4.29.2)(vue@3.5.13(typescript@5.8.3))
-      package-vanilla:
-        specifier: workspace:*
-        version: link:../package-vanilla
       vue:
         specifier: 3.5.13
         version: 3.5.13(typescript@5.8.3)
@@ -888,6 +895,12 @@ packages:
     resolution:
       {
         integrity: sha512-sdWoUajOB1cd0A8cRRQ1cfyWNbmFKLAqBB89Y8x5iYyG/mkJHc0YUH8pdWBy2omi9qtCpiIgGjuwO0dQST2l5w==,
+      }
+
+  "@types/jsbarcode@3.11.4":
+    resolution:
+      {
+        integrity: sha512-VBcpTAnEMH0Gbh8JpV14CgOtJjCYjsvR2FoDRyoYPE0gUxtApf8N4c+HKEOyz/iiIZkMzqrzBA3XX7+KgKxxsA==,
       }
 
   "@types/json-schema@7.0.15":
@@ -2240,6 +2253,12 @@ packages:
         integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==,
       }
     hasBin: true
+
+  jsbarcode@3.11.6:
+    resolution:
+      {
+        integrity: sha512-G5TKGyKY1zJo0ZQKFM1IIMfy0nF2rs92BLlCz+cU4/TazIc4ZH+X1GYeDRt7TKjrYqmPfTjwTBkU/QnQlsYiuA==,
+      }
 
   json-parse-even-better-errors@2.3.1:
     resolution:
@@ -3909,6 +3928,10 @@ snapshots:
     dependencies:
       "@types/node": 22.14.1
 
+  "@types/jsbarcode@3.11.4":
+    dependencies:
+      "@types/node": 22.14.1
+
   "@types/json-schema@7.0.15": {}
 
   "@types/mime@1.3.5": {}
@@ -4697,6 +4720,8 @@ snapshots:
       supports-color: 8.1.1
 
   jiti@2.4.2: {}
+
+  jsbarcode@3.11.6: {}
 
   json-parse-even-better-errors@2.3.1: {}
 

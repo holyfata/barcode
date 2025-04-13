@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { HfQrcode } from "package-vue";
+import { HfBarcode } from "@holyfata/barcode-vue";
 </script>
 
 <template>
   <div>
-    <HfQrcode />
+    <HfBarcode value="Hello, World!" :options="{ displayValue: false }" />
   </div>
 </template>

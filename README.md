@@ -10,8 +10,8 @@ A starter for developint Web components with Rslib, featuring using stencil and 
 
 ## Command
 
-- npm run build: build package-vanilla -> build package-react+build package-vue -> build apps
-- npm run dev: build package-vanilla -> build package-react+build package-vue -> dev apps
+- npm run build: build package-vanilla -> build @holyfata/barcode-react+build @holyfata/barcode-vue -> build apps
+- npm run dev: build package-vanilla -> build @holyfata/barcode-react+build @holyfata/barcode-vue -> dev apps
 
 ## Components
 
