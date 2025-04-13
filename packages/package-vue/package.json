@@ -1,0 +1,40 @@
+{
+  "name": "package-vue",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rslib build && vue-tsc",
+    "bump": "changelogen --bump --no-tag",
+    "release": "changelogen --publish"
+  },
+  "devDependencies": {
+    "@rsbuild/plugin-vue": "1.0.7",
+    "@rslib/core": "0.6.2",
+    "@stencil/vue-output-target": "0.10.7",
+    "package-vanilla": "workspace:*",
+    "vue": "3.5.13",
+    "vue-tsc": "2.2.8"
+  },
+  "peerDependencies": {
+    "package-vanilla": "workspace:*",
+    "vue": ">=3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holyfata/web-component-starter",
+    "directory": "packages/package-vue"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "HolyFata",
+  "license": "MIT",
+  "description": "A Vue 3 component."
+}
